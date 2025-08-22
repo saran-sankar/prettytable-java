@@ -74,7 +74,8 @@ public class PrettyTable {
                         // numeric SQL types
                         if (type == Types.INTEGER || type == Types.DECIMAL || type == Types.FLOAT
                                 || type == Types.DOUBLE || type == Types.BIGINT
-                                || type == Types.NUMERIC || type == Types.SMALLINT) {
+                                || type == Types.NUMERIC || type == Types.SMALLINT
+                                || type == Types.REAL) {
                             rightAlign = true;
                         }
                     }
