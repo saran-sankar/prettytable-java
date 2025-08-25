@@ -13,8 +13,7 @@ public class Example {
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT id, name, department, salary FROM employees");
 
-        PrettyTable pt = new PrettyTable();
-        pt.displayResult(rs); // defaults to "auto" alignment (text left, numbers right)
+        PrettyTable.display(rs); // defaults to "auto" alignment (text left, numbers right)
 
         rs.close();
         stmt.close();
@@ -36,6 +35,6 @@ public class Example {
 
 ## Alignment Options
 
-- `displayResult(rs)` → auto-align (text left, numbers right)  
-- `displayResult(rs, "left")` → all columns left-aligned  
-- `displayResult(rs, "right")` → all columns right-aligned
+- `display(rs)` → auto-align (text left, numbers right)  
+- `display(rs, "left")` → all columns left-aligned  
+- `display(rs, "right")` → all columns right-aligned
