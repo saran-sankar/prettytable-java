@@ -3,8 +3,8 @@ import java.util.*;
 
 public class PrettyTable {
     
-    public void displayResult(ResultSet rs) {
-        displayResult(rs, "auto");
+    public static void display(ResultSet rs) {
+        display(rs, "auto");
     }
 
     /**
@@ -13,7 +13,7 @@ public class PrettyTable {
      *                  "right" -> all columns right aligned
      *                  "auto"  -> text left, numeric right
      */
-    public void displayResult(ResultSet rs, String alignment) {
+    public static void display(ResultSet rs, String alignment) {
         try {
             ResultSetMetaData meta = rs.getMetaData();
             int colCount = meta.getColumnCount();
